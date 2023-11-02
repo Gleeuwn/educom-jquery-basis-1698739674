@@ -20,17 +20,19 @@
               }
             })
             ///
+            $.ajax({
+            url: "https://api.dev-master.ninja/js/rating",
+            method: "POST",
+            data: { rating: value },
+            success: function(result) { 
+            console.log("Beoordeling met succes verzonden!");
+    }
+})
+
           })
 
       }) 
-      $.ajax({
-    url: "ratings.php",
-    method: "POST",
-    data: { rating: value },
-    success: function(result) { 
         
-    }
-})  
     </script>
   </head>
   <body>
